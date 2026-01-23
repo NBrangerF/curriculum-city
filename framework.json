@@ -1,0 +1,1278 @@
+{
+  "meta": {
+    "name": "Curriculum-Making Alignment Framework (Conceptual x Actor)",
+    "version": "0.3",
+    "language": "en",
+    "notes": [
+      "Designed for an interactive web explainer + teacher-facing diagnostic tools.",
+      "All categories are ideal-types; real settings often hybridize under constraints."
+    ]
+  },
+  "coordinates": {
+    "ontology_spectrum": {
+      "scale": [
+        {
+          "code": "1.1",
+          "label": "Naive Realism",
+          "definition": "Reality can be understood through appropriate methods."
+        },
+        {
+          "code": "1.2",
+          "label": "Structural Realism",
+          "definition": "Theories describe aspects/structures of reality; underlying essence may remain uncertain."
+        },
+        {
+          "code": "1.3",
+          "label": "Critical Realism",
+          "definition": "Reality exists and can be approached through critical examination of deeper mechanisms."
+        },
+        {
+          "code": "1.4",
+          "label": "Bounded Relativism",
+          "definition": "Psychological constructions of reality are valid within cultural/moral/cognitive boundaries."
+        },
+        {
+          "code": "1.5",
+          "label": "Relativism",
+          "definition": "Reality is multiple and constructed; no mind-independent reality is accessible/meaningful."
+        }
+      ]
+    },
+    "epistemology_spectrum": {
+      "scale": [
+        {
+          "code": "2.1",
+          "label": "Objectivism",
+          "definition": "Meaning is in the object, independent of the knower."
+        },
+        {
+          "code": "2.2",
+          "label": "Constructionism",
+          "definition": "Meaning emerges from subject–object interaction; the knower constructs meaning."
+        },
+        {
+          "code": "2.3",
+          "label": "Subjectivism",
+          "definition": "Meaning is in the subject; the knower assigns meaning."
+        }
+      ]
+    }
+  },
+  "axis_A_conceptual": {
+    "levels": [
+      {
+        "level": 1,
+        "name": "Educational Philosophy",
+        "guiding_question": "Why educate? What kind of person/society is education for? (aims/ends)",
+        "outputs": [
+          "normative aims",
+          "assumptions about knowledge/reality",
+          "preferred roles (teacher/student/society)"
+        ]
+      },
+      {
+        "level": 2,
+        "name": "Curriculum Conception (Curriculum Orientation)",
+        "guiding_question": "What is curriculum, primarily for, in institutional schooling?",
+        "outputs": [
+          "prioritized curriculum function",
+          "content selection principles",
+          "pedagogy bias",
+          "evidence standards"
+        ]
+      },
+      {
+        "level": 3,
+        "name": "Curriculum Design Type (Organizational Form)",
+        "guiding_question": "How is content/experience organized across time and subjects? (scope/sequence/integration)",
+        "outputs": [
+          "course/unit structure",
+          "sequence & integration rules",
+          "common planning artifacts",
+          "assessment architecture"
+        ]
+      }
+    ],
+    "mechanism_summary": [
+      "Philosophy supplies value/legitimacy for aims and a worldview about knowledge and persons.",
+      "Curriculum conception translates those assumptions into a dominant 'function of curriculum' language for institutions.",
+      "Design type operationalizes that function into structures (scope/sequence/integration) and default evidence systems.",
+      "In practice, feedback loops occur: implementation evidence and constraints can reshape conceptions and even aims."
+    ]
+  },
+  "axis_B_curriculum_making": {
+    "premise": "Curriculum is dynamically made through interaction among actors across system levels; agency is ecological (enabled/constrained by structural, cultural, and material conditions).",
+    "sites_of_activity": [
+      {
+        "site": "supra",
+        "description": "Transnational/global discourse, benchmarks, and policy borrowing; professional networks; research and thought-leadership."
+      },
+      {
+        "site": "macro",
+        "description": "National/state/provincial curriculum policy, standards, qualifications, accountability regimes."
+      },
+      {
+        "site": "meso",
+        "description": "District/local authority and school-level translation: leadership, timetables, resourcing, professional learning, local priorities."
+      },
+      {
+        "site": "micro",
+        "description": "Classroom enactment: teachers and students interpret, adapt, and negotiate curriculum-in-use."
+      },
+      {
+        "site": "nano",
+        "description": "Moment-to-moment interaction and learner experience: participation, identity, meaning-making, assessment talk."
+      }
+    ],
+    "actor_types": [
+      {
+        "actor": "policy_makers",
+        "typical_power": "high",
+        "primary_concerns": [
+          "legitimacy",
+          "equity",
+          "national priorities",
+          "measurability"
+        ],
+        "typical_artifacts": [
+          "standards",
+          "assessment policy",
+          "curriculum frameworks"
+        ]
+      },
+      {
+        "actor": "system_leaders",
+        "typical_power": "high",
+        "primary_concerns": [
+          "implementation capacity",
+          "resource allocation",
+          "accountability"
+        ],
+        "typical_artifacts": [
+          "district pacing guides",
+          "professional learning plans",
+          "data dashboards"
+        ]
+      },
+      {
+        "actor": "school_leaders",
+        "typical_power": "medium-high",
+        "primary_concerns": [
+          "timetable",
+          "staffing",
+          "culture",
+          "school improvement"
+        ],
+        "typical_artifacts": [
+          "school curriculum policy",
+          "unit expectations",
+          "observation protocols"
+        ]
+      },
+      {
+        "actor": "teachers",
+        "typical_power": "medium",
+        "primary_concerns": [
+          "pedagogy",
+          "student needs",
+          "feasibility",
+          "assessment fairness"
+        ],
+        "typical_artifacts": [
+          "unit plans",
+          "lesson designs",
+          "rubrics",
+          "classroom norms"
+        ]
+      },
+      {
+        "actor": "students",
+        "typical_power": "low-medium",
+        "primary_concerns": [
+          "relevance",
+          "belonging",
+          "success criteria",
+          "voice"
+        ],
+        "typical_artifacts": [
+          "work products",
+          "feedback to teachers",
+          "peer norms"
+        ]
+      },
+      {
+        "actor": "families_community",
+        "typical_power": "medium (contextual)",
+        "primary_concerns": [
+          "values",
+          "identity",
+          "safety",
+          "future pathways"
+        ],
+        "typical_artifacts": [
+          "community expectations",
+          "partnership opportunities"
+        ]
+      },
+      {
+        "actor": "publishers_edtech",
+        "typical_power": "medium (market)",
+        "primary_concerns": [
+          "adoption",
+          "scalability",
+          "fidelity"
+        ],
+        "typical_artifacts": [
+          "textbooks",
+          "platform lesson banks",
+          "analytics"
+        ]
+      },
+      {
+        "actor": "assessment_bodies",
+        "typical_power": "high (credential)",
+        "primary_concerns": [
+          "standardization",
+          "comparability",
+          "validity"
+        ],
+        "typical_artifacts": [
+          "exams",
+          "blueprints",
+          "marking schemes"
+        ]
+      }
+    ]
+  },
+  "entities": {
+    "educational_philosophies": [
+      {
+        "id": "perennialism",
+        "label": "Perennialism",
+        "philosophical_basis": "Realism",
+        "ontology_range": [
+          "1.1",
+          "1.2"
+        ],
+        "epistemology_range": [
+          "2.1"
+        ],
+        "aims": [
+          "cultivate intellect and rationality",
+          "initiate learners into enduring ideas and classic disciplines"
+        ],
+        "ends": [
+          "timeless knowledge (canon)",
+          "disciplined reasoning",
+          "cultural literacy"
+        ],
+        "means_bias": [
+          "Socratic dialogue",
+          "analysis of classic texts",
+          "explicit teaching of reasoning"
+        ],
+        "compatibilities": {
+          "curriculum_conceptions_preferred": [
+            "academic_rationalism",
+            "cognitive_processes (limited)"
+          ],
+          "design_types_often": [
+            "subject_centered>discipline",
+            "subject_centered>subject_design"
+          ]
+        },
+        "common_tensions": [
+          "relevance vs canon",
+          "inclusion vs tradition",
+          "student voice vs authoritative knowledge"
+        ]
+      },
+      {
+        "id": "essentialism",
+        "label": "Essentialism",
+        "philosophical_basis": "Idealism + Realism",
+        "ontology_range": [
+          "1.1",
+          "1.2"
+        ],
+        "epistemology_range": [
+          "2.1"
+        ],
+        "aims": [
+          "produce competent citizens",
+          "master core skills and foundational disciplines"
+        ],
+        "ends": [
+          "basic skills mastery",
+          "academic standards met",
+          "work/college readiness"
+        ],
+        "means_bias": [
+          "teacher authority",
+          "structured instruction",
+          "practice + correction"
+        ],
+        "compatibilities": {
+          "curriculum_conceptions_preferred": [
+            "academic_rationalism",
+            "curriculum_as_technology (often)"
+          ],
+          "design_types_often": [
+            "subject_centered>subject_design",
+            "subject_centered>correlation",
+            "subject_centered>process_design (skills)"
+          ]
+        },
+        "common_tensions": [
+          "narrowing curriculum under testing",
+          "equity vs tracking",
+          "coverage vs depth"
+        ]
+      },
+      {
+        "id": "progressivism",
+        "label": "Progressivism",
+        "philosophical_basis": "Pragmatism",
+        "ontology_range": [
+          "1.3",
+          "1.4"
+        ],
+        "epistemology_range": [
+          "2.2"
+        ],
+        "aims": [
+          "growth and democratic living",
+          "learning through inquiry and experience"
+        ],
+        "ends": [
+          "problem solving and inquiry habits",
+          "transferable competencies",
+          "meaningful understanding"
+        ],
+        "means_bias": [
+          "projects",
+          "experiential learning",
+          "guided inquiry",
+          "collaboration"
+        ],
+        "compatibilities": {
+          "curriculum_conceptions_preferred": [
+            "cognitive_processes",
+            "self_actualization",
+            "social_reconstruction (moderate)"
+          ],
+          "design_types_often": [
+            "learner_centered>child_centered",
+            "learner_centered>experience_centered",
+            "problem_centered>life_situations"
+          ]
+        },
+        "common_tensions": [
+          "structure vs openness",
+          "assessment validity for complex outcomes",
+          "teacher workload and consistency"
+        ]
+      },
+      {
+        "id": "reconstructionism",
+        "label": "Reconstructionism",
+        "philosophical_basis": "Pragmaticism / Critical pragmatism",
+        "ontology_range": [
+          "1.3",
+          "1.4"
+        ],
+        "epistemology_range": [
+          "2.2 (socially oriented)"
+        ],
+        "aims": [
+          "social critique and reform",
+          "education for change"
+        ],
+        "ends": [
+          "civic agency",
+          "critical consciousness",
+          "collective action competence"
+        ],
+        "means_bias": [
+          "issue inquiry",
+          "dialogue and deliberation",
+          "community engagement projects"
+        ],
+        "compatibilities": {
+          "curriculum_conceptions_preferred": [
+            "social_reconstruction"
+          ],
+          "design_types_often": [
+            "problem_centered>reconstructionist",
+            "learner_centered>radical"
+          ]
+        },
+        "common_tensions": [
+          "politicization concerns",
+          "community conflict",
+          "risk management and safeguarding"
+        ]
+      },
+      {
+        "id": "existential_humanistic",
+        "label": "Existentialism / Humanistic",
+        "philosophical_basis": "Existentialism + Humanistic psychology",
+        "ontology_range": [
+          "1.4",
+          "1.5"
+        ],
+        "epistemology_range": [
+          "2.3",
+          "2.2"
+        ],
+        "aims": [
+          "self-actualization and authenticity",
+          "holistic development (cognitive + affective)"
+        ],
+        "ends": [
+          "autonomy",
+          "identity coherence",
+          "meaning-making capacity"
+        ],
+        "means_bias": [
+          "choice and voice",
+          "reflection",
+          "supportive climate (empathy, congruence)"
+        ],
+        "compatibilities": {
+          "curriculum_conceptions_preferred": [
+            "self_actualization"
+          ],
+          "design_types_often": [
+            "learner_centered>humanistic",
+            "learner_centered>experience_centered"
+          ]
+        },
+        "common_tensions": [
+          "comparability across students",
+          "coverage expectations",
+          "accountability misfit with qualitative outcomes"
+        ]
+      }
+    ],
+    "curriculum_conceptions": [
+      {
+        "id": "academic_rationalism",
+        "label": "Academic Rationalism",
+        "definition": "Curriculum as disciplined knowledge and cultural inheritance organized by canonical subjects and their structures.",
+        "primary_function": "Transmit and induct learners into accumulated disciplinary knowledge and intellectual traditions.",
+        "content_principle": [
+          "canonical works and core concepts",
+          "disciplinary structure & ways of knowing",
+          "sequenced conceptual progression"
+        ],
+        "pedagogy_bias": [
+          "structured explanation + discussion",
+          "text-based analysis",
+          "apprenticeship into disciplinary reasoning"
+        ],
+        "evidence_standard": [
+          "disciplinary understanding",
+          "argumentation and explanation quality",
+          "valid demonstrations of core knowledge"
+        ],
+        "typical_design_affinities": [
+          "subject_centered (subject/discipline/broad-fields)"
+        ],
+        "common_assessment_architecture": [
+          "content exams",
+          "essay/argument tasks",
+          "discipline-specific performance tasks"
+        ]
+      },
+      {
+        "id": "cognitive_processes",
+        "label": "Cognitive Processes",
+        "definition": "Curriculum as a vehicle for developing transferable thinking processes (reasoning, problem-solving, metacognition).",
+        "primary_function": "Develop general cognitive skills; content serves as the medium for cognitive growth.",
+        "content_principle": [
+          "high-leverage tasks that elicit target thinking",
+          "cognitive demand and opportunities for transfer"
+        ],
+        "pedagogy_bias": [
+          "inquiry with strategy instruction",
+          "metacognitive routines",
+          "thinking visible protocols"
+        ],
+        "evidence_standard": [
+          "transfer to novel tasks",
+          "quality of reasoning process",
+          "strategy use over time"
+        ],
+        "typical_design_affinities": [
+          "process_design",
+          "problem_centered (inquiry)",
+          "discipline_design (as method)"
+        ],
+        "common_assessment_architecture": [
+          "performance tasks with reflection",
+          "think-alouds",
+          "learning journals and strategy checklists"
+        ]
+      },
+      {
+        "id": "curriculum_as_technology",
+        "label": "Curriculum as Technology",
+        "definition": "Curriculum as a technical system to efficiently achieve pre-specified objectives; focuses on 'how' to deliver outcomes.",
+        "primary_function": "Efficiency and efficacy in achieving measurable goals; standardization and replicability.",
+        "content_principle": [
+          "content-neutral or interchangeable; selected for alignment to objectives and assessability"
+        ],
+        "pedagogy_bias": [
+          "systematic instructional design",
+          "explicit objectives",
+          "frequent checks + feedback loops"
+        ],
+        "evidence_standard": [
+          "measurable attainment",
+          "growth metrics",
+          "implementation fidelity and efficiency"
+        ],
+        "typical_design_affinities": [
+          "subject_design (standards-driven)",
+          "correlation (aligned pacing)"
+        ],
+        "common_assessment_architecture": [
+          "criterion-referenced tests",
+          "item banks",
+          "progress monitoring dashboards"
+        ]
+      },
+      {
+        "id": "self_actualization",
+        "label": "Self-Actualization / Consummatory Experience",
+        "definition": "Curriculum as meaningful lived experience that supports identity, autonomy, and holistic personal growth.",
+        "primary_function": "Support learners' self-understanding and full development; curriculum as an enabling process.",
+        "content_principle": [
+          "learner experience and relevance",
+          "expressive and reflective opportunities",
+          "integrated, personally meaningful themes"
+        ],
+        "pedagogy_bias": [
+          "choice and ownership",
+          "dialogue, reflection, and expression",
+          "supportive climate; confluence of affect and cognition"
+        ],
+        "evidence_standard": [
+          "qualitative growth indicators",
+          "student narratives and portfolios",
+          "self-assessment and community feedback"
+        ],
+        "typical_design_affinities": [
+          "learner_centered (humanistic/experience-centered)"
+        ],
+        "common_assessment_architecture": [
+          "portfolio conferences",
+          "learning stories",
+          "rubrics for reflection and self-regulation"
+        ]
+      },
+      {
+        "id": "social_reconstruction",
+        "label": "Social Reconstruction / Relevance",
+        "definition": "Curriculum as a socially situated program for interpreting and transforming society; foregrounds justice, relevance, and the future.",
+        "primary_function": "Build civic competence and agency; critique inequity and support collective improvement.",
+        "content_principle": [
+          "urgent public issues",
+          "power, equity, and sustainability themes",
+          "community-based knowledge and multiple perspectives"
+        ],
+        "pedagogy_bias": [
+          "critical inquiry",
+          "deliberation",
+          "action projects with community partners"
+        ],
+        "evidence_standard": [
+          "quality of analysis + ethical reasoning",
+          "feasible action and impact evidence",
+          "public communication and reflection"
+        ],
+        "typical_design_affinities": [
+          "problem_centered (reconstructionist)",
+          "life_situations/core curriculum"
+        ],
+        "common_assessment_architecture": [
+          "authentic public products",
+          "action research reports",
+          "community feedback + reflection"
+        ]
+      }
+    ],
+    "curriculum_design_types": [
+      {
+        "id": "subject_centered",
+        "label": "Subject-Centered Design",
+        "definition": "Curriculum organized around subject/discipline knowledge structures and sequences.",
+        "subtypes": [
+          {
+            "id": "subject_design",
+            "label": "Subject Design",
+            "planning_practices": [
+              "build scope-and-sequence by grade/course; prioritize coverage and prerequisites",
+              "map standards to units; pacing guides; common assessments calendar"
+            ],
+            "instruction_practices": [
+              "explicit teaching + modeling; worked examples; guided practice; retrieval practice",
+              "textbook/primary sources; structured discussions; lab demos as confirmation"
+            ],
+            "assessment_practices": [
+              "unit tests/quizzes (criterion-referenced); essays/short answers aligned to content",
+              "common item analysis and reteach cycles"
+            ],
+            "best_fit_for": [
+              "foundational knowledge and skills",
+              "high-stakes certification contexts",
+              "large-scale standardization"
+            ],
+            "tradeoffs": [
+              "risk of fragmentation",
+              "relevance may be weak",
+              "may privilege students with prior cultural capital"
+            ],
+            "example_cards": [
+              {
+                "context": "Grade 8 mathematics: linear equations",
+                "planning": "sequence from integers → expressions → equations; daily learning targets",
+                "instruction": "I do / We do / You do; error analysis routines",
+                "assessment": "weekly quiz + cumulative test; mastery-based retakes"
+              },
+              {
+                "context": "History survey course",
+                "planning": "chronological unit map; key concepts + vocabulary list",
+                "instruction": "mini-lecture + source analysis worksheet + seminar",
+                "assessment": "DBQ-style essay + content quiz"
+              },
+              {
+                "context": "Language arts",
+                "planning": "genre units; reading list; explicit skills progression",
+                "instruction": "close reading protocol; sentence-combining drills; Socratic seminar",
+                "assessment": "timed writing + rubric-based composition"
+              }
+            ]
+          },
+          {
+            "id": "discipline_design",
+            "label": "Discipline Design",
+            "planning_practices": [
+              "organize units around 'big ideas' and disciplinary practices (e.g., modeling, argumentation)",
+              "spiral key concepts; plan inquiry sequences with disciplinary tools"
+            ],
+            "instruction_practices": [
+              "disciplinary apprenticeship: modeling how experts think; inquiry with explicit method teaching",
+              "argument from evidence; critique and revision cycles"
+            ],
+            "assessment_practices": [
+              "performance tasks requiring disciplinary methods (investigations, proofs, critiques)",
+              "rubrics for practices (evidence use, modeling, reasoning)"
+            ],
+            "best_fit_for": [
+              "deep understanding",
+              "disciplinary literacy",
+              "STEM practice integration"
+            ],
+            "tradeoffs": [
+              "higher teacher expertise demands",
+              "time-intensive",
+              "coverage pressure"
+            ],
+            "example_cards": [
+              {
+                "context": "Biology: evolution",
+                "planning": "big idea map + misconceptions; design investigation + argument task",
+                "instruction": "claim-evidence-reasoning; model scientific explanation",
+                "assessment": "investigation report + oral defense"
+              },
+              {
+                "context": "Physics: forces",
+                "planning": "conceptual model progression; plan labs that reveal invariants",
+                "instruction": "predict-observe-explain cycles; whiteboard discussions",
+                "assessment": "concept inventory + lab portfolio"
+              },
+              {
+                "context": "Civics: constitutional interpretation",
+                "planning": "case-law set; interpretive lenses",
+                "instruction": "moot court; structured argumentation",
+                "assessment": "position paper + debate rubric"
+              }
+            ]
+          },
+          {
+            "id": "broad_fields",
+            "label": "Broad-Fields Design",
+            "planning_practices": [
+              "merge related subjects into fields (e.g., social studies); establish shared big questions",
+              "develop interdisciplinary progressions and common vocabulary"
+            ],
+            "instruction_practices": [
+              "thematic units; cross-disciplinary texts and tools; integration mini-lessons",
+              "structured projects but anchored to field outcomes"
+            ],
+            "assessment_practices": [
+              "integrated performance tasks; field-based exams (concepts across sub-disciplines)",
+              "projects evaluated with multi-criteria rubrics"
+            ],
+            "best_fit_for": [
+              "reducing fragmentation",
+              "connecting ideas across related subjects"
+            ],
+            "tradeoffs": [
+              "risk of shallow coverage",
+              "discipline rigor may blur",
+              "coordination cost"
+            ],
+            "example_cards": [
+              {
+                "context": "Social Studies: Migration",
+                "planning": "geography + history + civics outcomes; timeline + map skills",
+                "instruction": "case studies; data interpretation; seminar",
+                "assessment": "policy brief + map-based test"
+              },
+              {
+                "context": "Integrated Science",
+                "planning": "energy as unifying concept; cross-unit phenomena",
+                "instruction": "phenomena-based investigation",
+                "assessment": "phenomena explanation + practical test"
+              }
+            ]
+          },
+          {
+            "id": "correlation_design",
+            "label": "Correlation Design",
+            "planning_practices": [
+              "maintain separate subjects but coordinate timing and shared themes",
+              "create cross-curricular planning checkpoints"
+            ],
+            "instruction_practices": [
+              "teachers reference parallel learning (e.g., stats in science)",
+              "shared projects used as integration moments"
+            ],
+            "assessment_practices": [
+              "parallel rubrics for shared skills (argument, data literacy)",
+              "capstone tasks that pull from multiple subjects"
+            ],
+            "best_fit_for": [
+              "schools keeping subject timetables but wanting coherence"
+            ],
+            "tradeoffs": [
+              "often superficial links",
+              "requires collaboration time"
+            ],
+            "example_cards": [
+              {
+                "context": "ELA + History",
+                "planning": "align WWII unit with novel study",
+                "instruction": "shared source analysis routine",
+                "assessment": "joint rubric for evidence-based writing"
+              }
+            ]
+          },
+          {
+            "id": "process_design",
+            "label": "Process Design",
+            "planning_practices": [
+              "define target thinking processes (scientific method, critical thinking) and embed across subjects",
+              "select tasks for cognitive demand; plan metacognitive routines"
+            ],
+            "instruction_practices": [
+              "explicit strategy instruction; modeling thinking; gradual release",
+              "thinking routines (e.g., claim-support-question) across lessons"
+            ],
+            "assessment_practices": [
+              "process rubrics; reflection prompts; transfer tasks in new contexts",
+              "portfolio of thinking artifacts (notes, drafts, revisions)"
+            ],
+            "best_fit_for": [
+              "competency/skills agendas",
+              "metacognition and transfer goals"
+            ],
+            "tradeoffs": [
+              "harder to standardize",
+              "needs teacher learning on processes"
+            ],
+            "example_cards": [
+              {
+                "context": "School-wide critical thinking",
+                "planning": "common process rubric; benchmark tasks each term",
+                "instruction": "think-alouds; error analysis",
+                "assessment": "transfer task + reflection interview"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "learner_centered",
+        "label": "Learner-Centered Design",
+        "definition": "Curriculum organized around learners' needs, interests, developmental tasks, and lived experience.",
+        "subtypes": [
+          {
+            "id": "child_centered",
+            "label": "Child-Centered Design",
+            "planning_practices": [
+              "start from learners' questions; co-plan inquiries; flexible pacing",
+              "diagnose readiness and interests; differentiate pathways"
+            ],
+            "instruction_practices": [
+              "workshops, centers, exploration; teacher as facilitator",
+              "student choice in tasks and products; formative conferencing"
+            ],
+            "assessment_practices": [
+              "observational records; formative check-ins; student self-assessment",
+              "portfolio of artifacts demonstrating growth"
+            ],
+            "best_fit_for": [
+              "early years",
+              "motivation and engagement",
+              "differentiated classrooms"
+            ],
+            "tradeoffs": [
+              "consistency across classes",
+              "coverage/comparability pressure"
+            ],
+            "example_cards": [
+              {
+                "context": "Grade 3 inquiry time",
+                "planning": "question wall → mini-lessons",
+                "instruction": "learning centers + small-group coaching",
+                "assessment": "learning stories + student conference"
+              }
+            ]
+          },
+          {
+            "id": "experience_centered",
+            "label": "Experience-Centered (Activity) Design",
+            "planning_practices": [
+              "design rich experiences (fieldwork, making, simulations) that generate questions",
+              "plan reflection cycles to turn experience into learning"
+            ],
+            "instruction_practices": [
+              "experiential tasks; debrief protocols; iterative making",
+              "community resources and authentic audiences"
+            ],
+            "assessment_practices": [
+              "performance + reflection; peer feedback; narrative assessment",
+              "rubrics for process (planning, iteration, reflection)"
+            ],
+            "best_fit_for": [
+              "deep engagement",
+              "project-based learning",
+              "creative disciplines"
+            ],
+            "tradeoffs": [
+              "logistics and equity of access",
+              "assessment reliability"
+            ],
+            "example_cards": [
+              {
+                "context": "Middle school design challenge",
+                "planning": "define constraints; plan critique cycles",
+                "instruction": "studio work + mini-lessons on tools",
+                "assessment": "prototype demo + reflection essay"
+              }
+            ]
+          },
+          {
+            "id": "humanistic",
+            "label": "Humanistic Design",
+            "planning_practices": [
+              "plan for belonging, identity, and emotional safety as explicit design goals",
+              "integrate value clarification and self-reflection opportunities"
+            ],
+            "instruction_practices": [
+              "dialogic circles; journaling; choice-based reading/writing",
+              "teacher stance: empathy, authenticity, respect; co-created norms"
+            ],
+            "assessment_practices": [
+              "student-led conferences; reflective portfolios",
+              "qualitative indicators (agency, self-regulation, meaning-making)"
+            ],
+            "best_fit_for": [
+              "advisory programs",
+              "wellbeing/SEL",
+              "identity-rich learning contexts"
+            ],
+            "tradeoffs": [
+              "external accountability mismatch",
+              "risk of being seen as 'soft' if outcomes unclear"
+            ],
+            "example_cards": [
+              {
+                "context": "Advisory: identity and goals",
+                "planning": "themes + prompts; referral supports",
+                "instruction": "circle dialogue + personal action plan",
+                "assessment": "growth narrative + conference"
+              }
+            ]
+          },
+          {
+            "id": "radical",
+            "label": "Radical / Reform Design",
+            "planning_practices": [
+              "co-determine aims with learners; critical examination of schooling itself",
+              "plan for voice, dissent, and negotiated curriculum"
+            ],
+            "instruction_practices": [
+              "problem-posing dialogue; student-led investigations; self-directed learning contracts",
+              "peer teaching and democratic governance routines"
+            ],
+            "assessment_practices": [
+              "negotiated criteria; public exhibitions; reflective critique",
+              "evidence includes participation in collective decisions and action"
+            ],
+            "best_fit_for": [
+              "alternative schooling",
+              "youth participatory action research"
+            ],
+            "tradeoffs": [
+              "high contestation risk",
+              "difficult to align to mandated standards"
+            ],
+            "example_cards": [
+              {
+                "context": "Youth inquiry on school discipline policy",
+                "planning": "co-create research questions; ethics plan",
+                "instruction": "data collection + deliberation",
+                "assessment": "policy proposal + public hearing reflection"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "problem_centered",
+        "label": "Problem-Centered Design",
+        "definition": "Curriculum organized around real-world problems, themes, or social issues to support application and civic competence.",
+        "subtypes": [
+          {
+            "id": "life_situations",
+            "label": "Life-Situations (Life-Centered/Core) Design",
+            "planning_practices": [
+              "select life roles/situations (health, finance, citizenship) as organizers",
+              "map required knowledge/skills from multiple subjects into themes"
+            ],
+            "instruction_practices": [
+              "case-based learning; simulations; applied projects",
+              "explicit teaching of needed concepts as they arise"
+            ],
+            "assessment_practices": [
+              "authentic products (budgets, plans, presentations)",
+              "scenario-based assessments"
+            ],
+            "best_fit_for": [
+              "applied learning",
+              "career and life readiness",
+              "integrated competency outcomes"
+            ],
+            "tradeoffs": [
+              "risk of shallow disciplinary grounding",
+              "value disputes over 'what life skills'"
+            ],
+            "example_cards": [
+              {
+                "context": "Personal finance unit",
+                "planning": "theme map: income → budgeting → credit",
+                "instruction": "simulation + mini-lessons",
+                "assessment": "budget portfolio + scenario test"
+              }
+            ]
+          },
+          {
+            "id": "reconstructionist",
+            "label": "Reconstructionist (Critical/Action) Design",
+            "planning_practices": [
+              "choose public issues with local relevance; map stakeholders and risks",
+              "plan inquiry → deliberation → action → reflection cycle"
+            ],
+            "instruction_practices": [
+              "critical media literacy; community interviews; deliberative forums",
+              "student action projects with ethical guidance"
+            ],
+            "assessment_practices": [
+              "action research report; public product; community partner feedback",
+              "rubrics for argument quality, ethics, feasibility, reflection"
+            ],
+            "best_fit_for": [
+              "civics and citizenship",
+              "equity-focused schooling",
+              "place-based education"
+            ],
+            "tradeoffs": [
+              "political sensitivity",
+              "safeguarding and time constraints"
+            ],
+            "example_cards": [
+              {
+                "context": "Local water quality project",
+                "planning": "scientific + civic outcomes; partner plan",
+                "instruction": "field sampling + policy analysis",
+                "assessment": "public briefing + data report + reflection"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "learning_theories": [
+      {
+        "id": "behaviorism",
+        "label": "Behaviorism",
+        "core_claims": [
+          "learning as change in observable behavior",
+          "reinforcement and practice shape performance"
+        ],
+        "typical_strengths": [
+          "fluency and automaticity",
+          "clear success criteria and feedback"
+        ],
+        "risks": [
+          "over-narrow outcomes",
+          "can neglect meaning and transfer"
+        ],
+        "design_affinities": [
+          "curriculum_as_technology",
+          "essentialism",
+          "subject_design"
+        ],
+        "instructional_design_patterns": [
+          "clear objectives",
+          "model → practice → feedback",
+          "spaced retrieval and reinforcement schedules"
+        ],
+        "assessment_patterns": [
+          "frequent low-stakes checks",
+          "mastery criteria",
+          "error-correction loops"
+        ]
+      },
+      {
+        "id": "cognitivism",
+        "label": "Cognitivism",
+        "core_claims": [
+          "learning as information processing",
+          "schema, memory limits, and strategy matter"
+        ],
+        "typical_strengths": [
+          "conceptual understanding",
+          "instructional efficiency via cognitive principles"
+        ],
+        "risks": [
+          "can underplay identity/culture",
+          "may treat knowledge as decontextualized"
+        ],
+        "design_affinities": [
+          "cognitive_processes",
+          "process_design",
+          "discipline_design"
+        ],
+        "instructional_design_patterns": [
+          "worked examples",
+          "dual coding",
+          "scaffolding and fading",
+          "metacognitive prompts"
+        ],
+        "assessment_patterns": [
+          "explanations, concept maps",
+          "transfer tasks",
+          "error analysis with reflection"
+        ]
+      },
+      {
+        "id": "constructivism",
+        "label": "Constructivism (incl. social constructivism)",
+        "core_claims": [
+          "learners construct meaning through activity and interaction",
+          "knowledge is situated; discourse matters"
+        ],
+        "typical_strengths": [
+          "deep understanding",
+          "motivation and ownership",
+          "authentic problem solving"
+        ],
+        "risks": [
+          "inequity if guidance is insufficient",
+          "harder comparability and coverage"
+        ],
+        "design_affinities": [
+          "progressivism",
+          "self_actualization",
+          "social_reconstruction",
+          "learner_centered",
+          "problem_centered"
+        ],
+        "instructional_design_patterns": [
+          "guided inquiry",
+          "collaborative knowledge building",
+          "authentic tasks + reflection"
+        ],
+        "assessment_patterns": [
+          "portfolios",
+          "peer assessment",
+          "authentic performances with criteria co-construction"
+        ]
+      }
+    ]
+  },
+  "relationships": {
+    "non_determinism_rule": "No 1:1 mapping is assumed; categories interact under constraints and can be combined.",
+    "influence_paths": [
+      {
+        "from": "educational_philosophy",
+        "to": "curriculum_conception",
+        "how": "sets what counts as worthwhile outcomes and legitimate knowledge"
+      },
+      {
+        "from": "curriculum_conception",
+        "to": "design_type",
+        "how": "prioritizes curriculum function which drives organization (scope/sequence/integration) and evidence systems"
+      },
+      {
+        "from": "learning_theory",
+        "to": "design_type",
+        "how": "informs plausible learning pathways and therefore feasible structures (e.g., prerequisite sequencing, practice cycles, inquiry cycles)"
+      },
+      {
+        "from": "learning_theory",
+        "to": "instructional_design",
+        "how": "shapes task design, scaffolding, feedback, and cognitive/behavioral supports"
+      },
+      {
+        "from": "actors_and_power",
+        "to": "all_levels",
+        "how": "policy/accountability/resources constrain or enable which hybrids can be sustained"
+      }
+    ],
+    "misalignment_diagnostics": [
+      {
+        "pattern": "Evidence standard mismatch",
+        "symptoms": [
+          "teachers disagree on 'what counts as success'",
+          "meetings stuck on assessment debates"
+        ],
+        "likely_root_causes": [
+          "curriculum_as_technology vs self_actualization",
+          "academic_rationalism vs social_reconstruction"
+        ],
+        "quick_probes": [
+          "What evidence would convince us learning happened?",
+          "Which outcomes are non-negotiable and why?"
+        ]
+      },
+      {
+        "pattern": "Pedagogy-function mismatch",
+        "symptoms": [
+          "teachers adopt trendy methods but feel ineffective",
+          "students engaged but weak on foundational skills (or vice versa)"
+        ],
+        "likely_root_causes": [
+          "humanistic/constructivist means with essentialist ends without bridge structures",
+          "behaviorist drills used for aims requiring inquiry and agency"
+        ],
+        "quick_probes": [
+          "Do our daily tasks actually practice the outcomes we value?",
+          "Where is explicit instruction needed to make inquiry equitable?"
+        ]
+      },
+      {
+        "pattern": "Actor-constraint mismatch",
+        "symptoms": [
+          "curriculum vision exists but enactment fails",
+          "high workload and low fidelity"
+        ],
+        "likely_root_causes": [
+          "meso-level timetables/resources contradict micro-level design",
+          "assessment regime overrides teacher design"
+        ],
+        "quick_probes": [
+          "Which constraints are structural vs negotiable?",
+          "Who has authority to change timetable, resources, assessment policy?"
+        ]
+      }
+    ]
+  },
+  "ui_blueprint": {
+    "primary_views": [
+      {
+        "id": "concept_map_view",
+        "label": "Conceptual View (2D Map)",
+        "purpose": "Explore relationships among philosophy → conception → design, and overlay learning theories.",
+        "core_interactions": [
+          "hover to see definitions + examples",
+          "toggle overlays (learning theory, evidence standards)",
+          "show common hybrid patterns"
+        ],
+        "outputs": [
+          "shared vocabulary",
+          "conceptual alignment reflection"
+        ]
+      },
+      {
+        "id": "teacher_disagreement_view",
+        "label": "Teacher Lens (Disagreement Diagnostic)",
+        "purpose": "Help teachers interpret classroom or PLC disagreements as conceptual misalignments.",
+        "core_interactions": [
+          "select a 'symptom' card",
+          "get likely misalignment hypotheses",
+          "see suggested conversation prompts and bridging moves"
+        ],
+        "outputs": [
+          "actionable alignment moves",
+          "meeting scripts"
+        ]
+      }
+    ],
+    "suggested_additional_views": [
+      {
+        "id": "actor_power_overlay",
+        "label": "Actor/Power Overlay",
+        "idea": "Show macro/meso/micro constraints and who controls what (policy, timetable, assessment)."
+      },
+      {
+        "id": "lesson_autopsy",
+        "label": "Lesson Autopsy",
+        "idea": "Upload/enter a lesson; tag practices; infer implied conception/design/evidence standard; suggest alignments."
+      },
+      {
+        "id": "evidence_chain",
+        "label": "Evidence Chain Builder",
+        "idea": "Start from aims → define success evidence → derive assessment → derive learning tasks."
+      },
+      {
+        "id": "hybrid_recipe",
+        "label": "Hybrid Recipe Studio",
+        "idea": "Choose ends (e.g., essential skills) + choose means (e.g., inquiry) and generate bridging structures (mini-lessons, practice cycles)."
+      },
+      {
+        "id": "case_library",
+        "label": "Case Library",
+        "idea": "Browse real-ish unit cases; compare how different designs plan/instruct/assess the same topic."
+      }
+    ]
+  },
+  "references": [
+    {
+      "key": "Eisner_Vallance_1974_chapter",
+      "note": "Five curriculum conceptions (academic rationalism, cognitive processes, curriculum as technology, self-actualization, social reconstruction).",
+      "source": "docs_148D7A15 (PDF)"
+    },
+    {
+      "key": "Humanistic_design_section",
+      "note": "Humanistic curriculum design: 'meaning more important than methods', confluence of affect and cognition.",
+      "source": "docs_148D7A10 (PDF)"
+    },
+    {
+      "key": "Ornstein_1990_overviews",
+      "note": "Overview tables on educational philosophies and traditional vs contemporary philosophical emphases.",
+      "source": "Ornstein-PhilosophyBasisCurriculum-1990 (PDF)"
+    },
+    {
+      "key": "Priestley_curriculum_making",
+      "note": "Curriculum making as multi-level, socially situated practice; teacher agency ecological framing.",
+      "source": "Priestley et al. (peer-reviewed papers; see web citations in companion notes)"
+    }
+  ]
+}

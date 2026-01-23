@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0a0a0a;
+  --background: #f8fafc;
+  --accent: #0054a8;
+  --accent-light: #e0efff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #f8fafc;
+    --background: #0a0a0a;
+    --accent: #36a5ff;
+    --accent-light: #04264b;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Blueprint grid background */
+.bg-blueprint {
+  background-color: var(--background);
+  background-image: 
+    linear-gradient(rgba(6, 60, 114, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 60, 114, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Heat intensity backgrounds */
+.heat-0 { background-color: #f8fafc; }
+.heat-1 { background-color: #dcfce7; }
+.heat-2 { background-color: #bbf7d0; }
+.heat-3 { background-color: #fef08a; }
+.heat-4 { background-color: #fca5a5; }
+
+/* Dark mode heat */
+@media (prefers-color-scheme: dark) {
+  .heat-0 { background-color: #1e293b; }
+  .heat-1 { background-color: #14532d; }
+  .heat-2 { background-color: #166534; }
+  .heat-3 { background-color: #713f12; }
+  .heat-4 { background-color: #7f1d1d; }
+}
+
+/* Actor level badges */
+.actor-macro { 
+  background-color: #7c3aed; 
+  color: white;
+}
+.actor-meso { 
+  background-color: #0891b2; 
+  color: white;
+}
+.actor-micro { 
+  background-color: #059669; 
+  color: white;
+}
+.actor-nano { 
+  background-color: #d97706; 
+  color: white;
+}
+
+/* Influence mode icons */
+.mode-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+/* Tension marker */
+.tension-marker {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* Matrix cell styling */
+.matrix-cell {
+  min-width: 100px;
+  min-height: 60px;
+  border: 1px solid rgba(6, 60, 114, 0.1);
+  transition: all 0.15s ease;
+}
+
+.matrix-cell:hover {
+  box-shadow: 0 0 0 2px var(--accent);
+  z-index: 10;
+}
+
+/* Sticky headers */
+.sticky-row-header {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background: var(--background);
+}
+
+.sticky-column-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--background);
+}
+
+/* Panel styling */
+.panel {
+  background: var(--background);
+  border-left: 1px solid rgba(6, 60, 114, 0.1);
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Tooltip */
+.tooltip {
+  background: var(--background);
+  border: 1px solid rgba(6, 60, 114, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  max-width: 300px;
+  z-index: 50;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 60, 114, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 60, 114, 0.3);
+}
+
+/* Layer tab styles */
+.layer-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.layer-tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+.layer-tab:not(.active) {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.layer-tab:not(.active):hover {
+  background: var(--accent);
+  color: white;
+  opacity: 0.8;
+}
+
+/* Example card */
+.example-card {
+  background: var(--background);
+  border: 1px solid rgba(6, 60, 114, 0.15);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.15s ease;
+}
+
+.example-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+}
