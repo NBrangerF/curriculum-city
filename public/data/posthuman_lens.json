@@ -1,0 +1,306 @@
+{
+    "meta": {
+        "name": "Posthumanism Lens",
+        "version": "2.0",
+        "description": "An interpretive lens that decenters the human, attending to more-than-human relations in curriculum-making",
+        "notes": [
+            "This lens suspends canonical structures entirely",
+            "It repositions humans as one actor among many",
+            "Agency is understood as distributed, not owned"
+        ]
+    },
+    "main_view": {
+        "title": "Curriculum as Entanglement",
+        "subtitle": "A posthuman perspective",
+        "declarations": [
+            {
+                "statement": "Curriculum is not a stable object.",
+                "elaboration": "It does not reside in documents, plans, or standards alone. It emerges through relations."
+            },
+            {
+                "statement": "Learning is not acquired or transmitted.",
+                "elaboration": "It is produced in events—moments of intra-action among people, materials, technologies, time, and affect."
+            },
+            {
+                "statement": "Agency is distributed.",
+                "elaboration": "Humans are participants, not origins. Intention is not the sole driver of meaning."
+            },
+            {
+                "statement": "Design shapes conditions, not outcomes.",
+                "elaboration": "Plans are provisional. What emerges cannot be fully predicted or controlled."
+            }
+        ],
+        "exploratory_questions": [
+            "What if curriculum happens through us, not by us?",
+            "What actors are present but overlooked?",
+            "How do materials, spaces, and rhythms participate in learning?",
+            "What would it mean to attune rather than control?",
+            "How might we design for negotiation rather than optimization?"
+        ],
+        "closing_reflection": "This lens does not propose a new curriculum framework. It temporarily withholds framework thinking itself—to ask different questions."
+    },
+    "philosophical_orientation": {
+        "core_principle": "Decentering the Human",
+        "key_shifts": [
+            {
+                "from": "human intention",
+                "to": "relational emergence"
+            },
+            {
+                "from": "control",
+                "to": "attunement"
+            },
+            {
+                "from": "optimization",
+                "to": "negotiation"
+            },
+            {
+                "from": "acquisition",
+                "to": "intra-action"
+            },
+            {
+                "from": "bounded curriculum",
+                "to": "entangled curriculum"
+            }
+        ],
+        "curriculum_as": "Emergent, relational, eventful—produced through intra-action among people, tools, spaces, discourses, time, and affect"
+    },
+    "posthuman_actors": [
+        {
+            "id": "material_actors",
+            "category": "material",
+            "label": "Material Actors",
+            "icon": "🧱",
+            "color": "#8B5CF6",
+            "definition": "Physical objects and environments that participate in curriculum enactment",
+            "examples": [
+                "Textbooks & workbooks",
+                "Classroom furniture",
+                "Laboratory equipment",
+                "Art supplies & materials",
+                "Playground structures"
+            ],
+            "agency_framing": "Materials afford, constrain, and shape what becomes possible. They are not neutral tools but active participants in learning.",
+            "common_influences": [
+                "Spatial arrangement affects collaboration patterns",
+                "Material availability shapes pedagogical choices",
+                "Physical affordances enable or limit exploration"
+            ]
+        },
+        {
+            "id": "technological_actors",
+            "category": "technological",
+            "label": "Technological Actors",
+            "icon": "💻",
+            "color": "#3B82F6",
+            "definition": "Digital systems, platforms, and algorithms that mediate and co-produce curriculum",
+            "examples": [
+                "Learning Management Systems",
+                "Assessment algorithms",
+                "Content recommendation engines",
+                "Collaboration platforms",
+                "Data dashboards"
+            ],
+            "agency_framing": "Technologies are not mere delivery mechanisms. They actively shape what counts as learning, who is visible, and what pathways are possible.",
+            "common_influences": [
+                "Algorithms prioritize certain content or behaviors",
+                "Platform structures constrain interaction types",
+                "Data systems define what is measured and valued"
+            ]
+        },
+        {
+            "id": "temporal_actors",
+            "category": "temporal",
+            "label": "Temporal Actors",
+            "icon": "⏱️",
+            "color": "#F59E0B",
+            "definition": "Time structures, rhythms, and pacing that regulate curriculum flow",
+            "examples": [
+                "Lesson timing & periods",
+                "Academic calendars",
+                "Assessment deadlines",
+                "Curriculum pacing guides",
+                "Seasonal rhythms"
+            ],
+            "agency_framing": "Time is not a neutral container. Temporal structures actively produce urgency, depth, and what gets attended to or neglected.",
+            "common_influences": [
+                "Pacing determines coverage vs. depth trade-offs",
+                "Deadlines create pressure and prioritization",
+                "Rhythms establish what feels normal or rushed"
+            ]
+        },
+        {
+            "id": "affective_actors",
+            "category": "affective",
+            "label": "Affective Actors",
+            "icon": "💭",
+            "color": "#EC4899",
+            "definition": "Emotional climates, tensions, and motivational forces that permeate learning environments",
+            "examples": [
+                "Classroom climate",
+                "Anxiety & stress",
+                "Motivation & engagement",
+                "Trust relationships",
+                "Collective mood"
+            ],
+            "agency_framing": "Affect is not merely internal to individuals. It circulates and shapes what becomes thinkable, doable, and learnable.",
+            "common_influences": [
+                "Climate affects risk-taking and creativity",
+                "Anxiety narrows attention and possibility",
+                "Trust enables vulnerability and growth"
+            ]
+        },
+        {
+            "id": "ecological_actors",
+            "category": "ecological",
+            "label": "Ecological Actors",
+            "icon": "🌿",
+            "color": "#10B981",
+            "definition": "Environmental, spatial, and sustainability conditions that shape curriculum possibilities",
+            "examples": [
+                "Built learning spaces",
+                "Natural environments",
+                "Air quality & lighting",
+                "Energy systems",
+                "Local ecosystems"
+            ],
+            "agency_framing": "Ecology is not just context. Spaces and environments actively invite or discourage certain forms of learning and being.",
+            "common_influences": [
+                "Space design shapes movement and interaction",
+                "Environmental conditions affect focus and wellbeing",
+                "Sustainability practices become curriculum themselves"
+            ]
+        }
+    ],
+    "language_transforms": {
+        "instructions": "When the posthuman lens is active, shift explanatory language to foreground relations and distributed agency",
+        "transforms": [
+            {
+                "from": "The teacher designs",
+                "to": "Design emerges through"
+            },
+            {
+                "from": "The teacher delivers",
+                "to": "Curriculum unfolds through"
+            },
+            {
+                "from": "Students learn",
+                "to": "Learning emerges"
+            },
+            {
+                "from": "Students achieve",
+                "to": "Achievement is produced through"
+            },
+            {
+                "from": "The curriculum provides",
+                "to": "Relations make available"
+            },
+            {
+                "from": "This approach requires",
+                "to": "This approach is enabled by"
+            },
+            {
+                "from": "Teachers must",
+                "to": "Conditions may support"
+            },
+            {
+                "from": "Students need to",
+                "to": "Interactions often involve"
+            },
+            {
+                "from": "The goal is for students to",
+                "to": "Effects may include"
+            },
+            {
+                "from": "Assessment measures",
+                "to": "Assessment produces traces of"
+            }
+        ],
+        "phrasing_guidance": [
+            "Use 'From a posthuman reading…' to introduce lens-specific interpretations",
+            "Prefer 'emerges through' over 'is caused by'",
+            "Name non-human actors explicitly when relevant",
+            "Avoid linear cause-effect framings where possible"
+        ]
+    },
+    "entity_annotations": {
+        "philosophies": {
+            "perennialism": {
+                "posthuman_reading": "Viewed through a posthuman lens, perennialism's enduring truths might be understood not as fixed essences but as stabilized network effects—ideas that have persisted through particular material-discursive assemblages of texts, institutions, and practices.",
+                "hidden_actors": [
+                    "canonical texts as material actors",
+                    "institutional traditions",
+                    "examination systems"
+                ]
+            },
+            "progressivism": {
+                "posthuman_reading": "A posthuman reading foregrounds how 'child-centered' approaches distribute agency across materials, spaces, and relations. The child is not an autonomous learner but emerges through interaction with an arranged environment.",
+                "hidden_actors": [
+                    "manipulative materials",
+                    "flexible spaces",
+                    "documentation systems"
+                ]
+            },
+            "reconstructionism": {
+                "posthuman_reading": "Posthumanism might ask: who or what else is reconstructing society? This lens attends to how social change is produced through hybrid assemblages of human action, media technologies, environmental conditions, and affective intensities.",
+                "hidden_actors": [
+                    "media platforms",
+                    "social movements as assemblages",
+                    "climate systems"
+                ]
+            }
+        },
+        "conceptions": {
+            "academic_rationalism": {
+                "posthuman_reading": "Academic disciplines are not purely human constructs but are stabilized through libraries, laboratories, peer review systems, citation networks, and material practices that exceed individual intention.",
+                "hidden_actors": [
+                    "citation databases",
+                    "disciplinary journals",
+                    "laboratory equipment"
+                ]
+            },
+            "cognitive_processes": {
+                "posthuman_reading": "Cognition, in this reading, is not located solely in minds but is distributed across tools, representations, and environments. Thinking happens in the extended assemblage of human-tool-environment.",
+                "hidden_actors": [
+                    "cognitive tools",
+                    "representational systems",
+                    "problem-solving environments"
+                ]
+            },
+            "curriculum_as_technology": {
+                "posthuman_reading": "This conception already gestures toward non-human agency. Posthumanism intensifies this: the curriculum-as-technology is not simply a tool humans use but an actor that shapes what humans become.",
+                "hidden_actors": [
+                    "learning analytics",
+                    "automated feedback",
+                    "pacing algorithms"
+                ]
+            }
+        }
+    },
+    "design_implications": {
+        "principle": "Designing for More-than-Human Negotiation",
+        "guidance": [
+            "Design shapes conditions, affordances, and constraints—not outcomes",
+            "Success is judged by responsiveness and sustainability of relations",
+            "Plans are provisional; outcomes are traces, not endpoints",
+            "Attend to what the design makes likely, not what it guarantees"
+        ],
+        "questions_for_designers": [
+            "What non-human actors will participate in this curriculum?",
+            "How might materials, technologies, or spaces shape what emerges?",
+            "What temporal rhythms are being installed, and what do they enable or foreclose?",
+            "How might affective climates be cultivated or disrupted?",
+            "What ecological conditions support or strain this design?"
+        ]
+    },
+    "ui_guidance": {
+        "lens_toggle": {
+            "default_label": "Human-Centered",
+            "posthuman_label": "Posthuman Lens",
+            "tooltip": "Switch to an analytical lens that attends to more-than-human relations"
+        },
+        "annotation_prefix": "From a posthuman reading: ",
+        "actor_section_title": "More-than-Human Actors",
+        "disclaimer": "This lens is a way of seeing, not a normative prescription. It destabilizes certainty to surface overlooked actors and relations."
+    }
+}

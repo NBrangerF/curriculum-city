@@ -3,7 +3,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { loadFramework, groupActorsByLevel, searchActors, type Framework, type Actor } from '@/lib/framework/loadFramework';
+import { useLens, type PosthumanActor } from '@/contexts/LensContext';
+import PosthumanActorCard from '@/components/Lens/PosthumanActorCard';
+import { LensIndicator } from '@/components/Lens/LensToggle';
 import type { ActorLevel } from '@/data/schema/actor.schema';
+import SiteHeader from '@/components/Layout/SiteHeader';
 
 const LEVEL_CONFIG: Record<ActorLevel, { label: string; icon: string; color: string }> = {
     supra: { label: 'Supra', icon: '🌐', color: 'pink' },
@@ -17,11 +21,16 @@ const LEVEL_ORDER: ActorLevel[] = ['supra', 'macro', 'meso', 'micro', 'nano'];
 
 export default function ActorsPage() {
     const [framework, setFramework] = useState<Framework | null>(null);
-    const [selectedLevel, setSelectedLevel] = useState<ActorLevel | 'all'>('all');
+    const [selectedLevel, setSelectedLevel] = useState<ActorLevel | 'all' | 'posthuman'>('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [showExplainer, setShowExplainer] = useState(false);
+    const [showPosthumanSection, setShowPosthumanSection] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [expandedPosthumanId, setExpandedPosthumanId] = useState<string | null>(null);
+
+    // Access lens context
+    const { isPosthumanLens, lensData, posthumanActorsVisible } = useLens();
 
     useEffect(() => {
         loadFramework()
@@ -29,6 +38,7 @@ export default function ActorsPage() {
             .catch(err => setError(err.message))
             .finally(() => setLoading(false));
     }, []);
+
 
     // Group actors by level
     const groupedActors = useMemo(() => {
@@ -44,6 +54,8 @@ export default function ActorsPage() {
     // Filter actors
     const filteredActors = useMemo(() => {
         if (!framework) return [];
+        // If posthuman view is selected, return empty (posthuman actors shown separately)
+        if (selectedLevel === 'posthuman') return [];
 
         let actors = searchQuery.trim()
             ? searchActors(framework, searchQuery)
@@ -55,6 +67,12 @@ export default function ActorsPage() {
 
         return actors;
     }, [framework, searchQuery, selectedLevel]);
+
+    // Posthuman actors from lens data
+    const posthumanActors = useMemo(() => {
+        return lensData?.posthuman_actors || [];
+    }, [lensData]);
+
 
     if (loading) {
         return (
@@ -87,29 +105,7 @@ export default function ActorsPage() {
     return (
         <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950">
             {/* Navigation */}
-            <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-                <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-                    <div className="flex items-center gap-6">
-                        <Link href="/" className="flex items-center gap-2 hover:opacity-80">
-                            <span className="text-xl">🏛️</span>
-                            <span className="font-semibold text-slate-900 dark:text-white hidden sm:inline">
-                                Curriculum City
-                            </span>
-                        </Link>
-                        <nav className="flex items-center gap-4">
-                            <Link href="/concepts" className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
-                                Concepts
-                            </Link>
-                            <Link href="/actors" className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                                Actors
-                            </Link>
-                            <Link href="/about" className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
-                                About
-                            </Link>
-                        </nav>
-                    </div>
-                </div>
-            </header>
+            <SiteHeader />
 
             {/* Explainer */}
             <div className="bg-gradient-to-r from-violet-50 via-cyan-50 to-amber-50 dark:from-violet-900/10 dark:via-cyan-900/10 dark:to-amber-900/10 border-b border-slate-200 dark:border-slate-800">
@@ -179,8 +175,8 @@ export default function ActorsPage() {
                         <button
                             onClick={() => setSelectedLevel('all')}
                             className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedLevel === 'all'
-                                    ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
+                                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-900'
+                                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                                 }`}
                         >
                             All Levels
@@ -192,8 +188,8 @@ export default function ActorsPage() {
                                     key={level}
                                     onClick={() => setSelectedLevel(level)}
                                     className={`flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedLevel === level
-                                            ? `bg-${config.color}-100 dark:bg-${config.color}-900/30 text-${config.color}-700 dark:text-${config.color}-300 ring-2 ring-${config.color}-500`
-                                            : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
+                                        ? `bg-${config.color}-100 dark:bg-${config.color}-900/30 text-${config.color}-700 dark:text-${config.color}-300 ring-2 ring-${config.color}-500`
+                                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                                         }`}
                                 >
                                     <span>{config.icon}</span>
@@ -202,6 +198,24 @@ export default function ActorsPage() {
                                 </button>
                             );
                         })}
+
+                        {/* Posthuman Actors Button - visible when lens is active */}
+                        {isPosthumanLens && posthumanActors.length > 0 && (
+                            <>
+                                <div className="w-px h-6 bg-slate-200 dark:bg-slate-700 flex-shrink-0" />
+                                <button
+                                    onClick={() => setSelectedLevel('posthuman')}
+                                    className={`flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedLevel === 'posthuman'
+                                        ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 ring-2 ring-violet-500'
+                                        : 'bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400 hover:bg-violet-100 dark:hover:bg-violet-900/30'
+                                        }`}
+                                >
+                                    <span>🔮</span>
+                                    <span>More-than-Human</span>
+                                    <span className="text-xs opacity-70">({posthumanActors.length})</span>
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
@@ -225,21 +239,65 @@ export default function ActorsPage() {
             {/* Actor Cards */}
             <main className="flex-1 p-4">
                 <div className="max-w-7xl mx-auto">
-                    {filteredActors.length === 0 ? (
-                        <div className="text-center py-12">
-                            <p className="text-slate-500 dark:text-slate-400">
-                                No actors found matching your filters.
-                            </p>
+                    {/* Posthuman Actors Section */}
+                    {selectedLevel === 'posthuman' && isPosthumanLens && (
+                        <div className="space-y-6">
+                            {/* Section Header */}
+                            <div className="bg-gradient-to-r from-violet-100 to-indigo-100 dark:from-violet-900/30 dark:to-indigo-900/30 rounded-xl p-4 border border-violet-200 dark:border-violet-800">
+                                <div className="flex items-start gap-3">
+                                    <span className="text-2xl">🔮</span>
+                                    <div>
+                                        <h2 className="text-lg font-semibold text-violet-900 dark:text-violet-100 mb-1">
+                                            More-than-Human Actors
+                                        </h2>
+                                        <p className="text-sm text-violet-700 dark:text-violet-300 leading-relaxed">
+                                            From a posthuman perspective, agency is distributed across human and non-human actors.
+                                            These categories highlight actors often overlooked in human-centered frameworks.
+                                        </p>
+                                        <p className="text-xs text-violet-600 dark:text-violet-400 mt-2 italic">
+                                            {lensData?.ui_guidance.disclaimer}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Posthuman Actor Cards */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {posthumanActors.map((actor) => (
+                                    <PosthumanActorCard
+                                        key={actor.id}
+                                        actor={actor}
+                                        expanded={expandedPosthumanId === actor.id}
+                                        onToggleExpand={() => setExpandedPosthumanId(
+                                            expandedPosthumanId === actor.id ? null : actor.id
+                                        )}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {filteredActors.map((actor) => (
-                                <ActorCard key={actor.id} actor={actor} />
-                            ))}
-                        </div>
+                    )}
+
+                    {/* Regular Actors Section */}
+                    {selectedLevel !== 'posthuman' && (
+                        <>
+                            {filteredActors.length === 0 ? (
+                                <div className="text-center py-12">
+                                    <p className="text-slate-500 dark:text-slate-400">
+                                        No actors found matching your filters.
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {filteredActors.map((actor) => (
+                                        <ActorCard key={actor.id} actor={actor} />
+                                    ))}
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
             </main>
+
 
             {/* Footer */}
             <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-4">

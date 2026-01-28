@@ -1,214 +1,122 @@
-# 🏛️ Curriculum City
+# Curriculum City
 
-A conceptual exploration tool for curriculum studies — helping educators and researchers understand curriculum-making through two complementary lenses.
+Curriculum City is a conceptual landscape for exploring curriculum-making.
 
-![Next.js](https://img.shields.io/badge/Next.js-15.5-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
+Rather than a linear explanation or a prescriptive model, it offers a navigable space—one where educational philosophies, curriculum conceptions, and design approaches can be encountered, compared, and reconsidered.
 
----
-
-## 📖 What is Curriculum City?
-
-Curriculum City is a **sense-making and learning tool** (not a diagnostic system) that helps users explore:
-
-1. **Conceptual Chain** — Educational philosophies, curriculum conceptions, and design types
-2. **Actor System** — Who makes curriculum and how they interact across system levels
-
-### Key Principles
-
-- **Non-linear relationships** — Philosophy ↔ Conception ↔ Design types interact bidirectionally
-- **Negotiated curriculum** — Curriculum emerges through actor interaction, not top-down implementation
-- **Hybridization** — Real practice often blends multiple approaches
-- **No fixed ideologies** — Actors can draw on different conceptual lenses
+This project is intended for educators, researchers, and curriculum designers who are curious about the traditions and tensions that shape how curriculum is understood, debated, and enacted. It is not a manual to follow, but a thinking companion to return to.
 
 ---
 
-## 🚀 Quick Start
+## How Knowledge Is Organized Here
 
-```bash
-# Clone and install
-git clone <repository-url>
-cd curriculum-city
-npm install
+Curriculum City presents curriculum-making as a conceptual field rather than a fixed procedure.
 
-# Start development server
-npm run dev
-```
+At its foundation, the space is organized around three interrelated layers:
 
-Open http://localhost:3000
+- **Educational philosophies** — broad orientations toward knowledge, learners, and the purposes of education
+- **Curriculum conceptions** — ways of thinking about what curriculum fundamentally *is* and what it should *do*
+- **Design types** — structures and approaches used to give curriculum material form
 
----
+These layers are not meant to be mechanically applied. Real curricula are often hybrids, drawing from multiple traditions at once. What appears here is a map of *tendencies*—patterns of thought that recur across curriculum discourse, presented to support orientation and reflection rather than to prescribe a path.
 
-## 📂 Project Structure
-
-```
-curriculum-city/
-├── app/                          # Next.js App Router
-│   ├── page.tsx                  # Landing page
-│   ├── concepts/page.tsx         # Conceptual Chain Explorer
-│   ├── actors/page.tsx           # Actor System Explorer
-│   └── about/page.tsx            # About & disclaimers
-│
-├── components/
-│   └── Framework/
-│       ├── EntityDetail.tsx      # Entity article view
-│       ├── PracticeSection.tsx   # Planning/instruction/assessment
-│       └── TensionsSection.tsx   # Common tensions display
-│
-├── lib/
-│   └── framework/
-│       └── loadFramework.ts      # Data access layer
-│
-├── public/
-│   └── data/
-│       └── framework.json        # Single source of truth
-│
-└── structure.md                  # Architecture documentation
-```
+The connections between ideas are suggestive, not binding. A philosophy may lean toward certain conceptions; a conception may be more or less compatible with certain designs. These associations reflect historical and conceptual affinities, not fixed rules.
 
 ---
 
-## 📊 Data: framework.json
+## The Lens System
 
-All content is driven by a single JSON file at `public/data/framework.json`.
+Curriculum City introduces the idea of *lenses*—different ways of framing and foregrounding curriculum knowledge.
 
-### Entity Structure
+A lens is not an ideology or an argument. It is a mode of reading: a way of deciding what to attend to, what to emphasize, and what to momentarily set aside.
 
-```json
-{
-  "id": "perennialism",
-  "label": "Perennialism",
-  "definition": "An educational philosophy that...",
-  "aims": ["cultivate intellect", "enduring ideas"],
-  "common_tensions": ["relevance vs canon", ...],
-  "practice_examples": [
-    {
-      "title": "Great Books seminar",
-      "planning_practices": [...],
-      "instruction_practices": [...],
-      "assessment_practices": [...]
-    }
-  ]
-}
-```
+By default, the space operates through what might be called a **Canonical Curriculum Lens**. This lens organizes curriculum thinking according to established traditions—major philosophies, recognized conceptions, and common design forms. It reflects how curriculum theory has often been taught, debated, and practiced in academic and professional settings.
 
-### Actor Structure
+This view is useful. It is also partial.
 
-```json
-{
-  "actor": "teachers",
-  "typical_power": "medium",
-  "primary_concerns": ["pedagogy", "student needs"],
-  "typical_artifacts": ["unit plans", "rubrics"]
-}
-```
+Some questions—some actors, some forces, some assumptions—remain harder to see from within canonical framing. This is not a flaw of any particular theory; it is a condition of any structured view. What a lens brings into focus, it achieves by placing other things in shadow.
+
+For this reason, Curriculum City includes an alternative lens: the **Posthuman Lens**.
 
 ---
 
-## 🧩 Data Access API
+## The Posthuman Lens
 
-```typescript
-import { 
-  loadFramework, 
-  searchEntities, 
-  groupActorsByLevel 
-} from '@/lib/framework/loadFramework';
+The Posthuman Lens offers a different mode of reading curriculum.
 
-// Load framework data
-const framework = await loadFramework();
+Where canonical curriculum thinking often centers human intention—treating teachers as designers, students as learners, and curriculum as a plan to be enacted—the Posthuman Lens decenters this framing. It invites a different set of questions:
 
-// Search entities
-const results = searchEntities(framework, "inquiry");
+- What if curriculum is not something humans design, but something that emerges through relations?
+- What actors participate in curriculum-making beyond the human roles we typically name?
+- How do materials, technologies, spaces, time, and affect shape what becomes possible in learning?
 
-// Group actors by level
-const grouped = groupActorsByLevel(framework);
-// → { supra: [], macro: [...], meso: [...], micro: [...], nano: [...] }
-```
+This perspective draws on posthumanist scholarship, which attends to the **more-than-human** dimensions of social life. It foregrounds the ways that objects, systems, rhythms, and environments participate in educational experience—not as passive backgrounds, but as actors with their own influences and affordances.
+
+The Posthuman Lens does not propose a new curriculum framework to replace existing ones. It does something different: it *suspends* familiar categories, temporarily, to make room for reflection on assumptions that often go unnoticed.
+
+This lens is offered for analytical and exploratory purposes. It is one way of seeing—useful for surfacing overlooked dimensions of curriculum practice, but not meant to be adopted as a doctrine.
 
 ---
 
-## 🛠️ Development
+## What Changes Under the Posthuman Lens
 
-```bash
-npm run dev      # Development server (hot reload)
-npm run build    # Production build
-npm run start    # Start production server
-npm run lint     # ESLint check
-```
+When the Posthuman Lens is active, the familiar curriculum map is intentionally withdrawn.
 
----
+Users do not see philosophies, conceptions, and design types arranged for comparison. Instead, they encounter a different kind of view—one that communicates *ideas* rather than *classifications*.
 
-## ➕ Adding New Content
+This is a deliberate pause from framework thinking.
 
-### Add a Philosophy/Conception/Design Type
+The intention is not to disorient, but to create a moment of epistemic reorientation: a space to ask *what curriculum is* before asking *how it should be designed*.
 
-1. Open `public/data/framework.json`
-2. Add to the appropriate array:
-   - `entities.educational_philosophies`
-   - `entities.curriculum_conceptions`
-   - `entities.curriculum_design_types`
-
-```json
-{
-  "id": "new_philosophy",
-  "label": "New Philosophy Name",
-  "definition": "Description of the philosophy...",
-  "aims": ["aim 1", "aim 2"],
-  "practice_examples": [
-    {
-      "id": "ex_01",
-      "title": "Example Practice",
-      "planning_practices": ["..."],
-      "instruction_practices": ["..."],
-      "assessment_practices": ["..."]
-    }
-  ]
-}
-```
-
-3. The UI will render automatically (schema-tolerant)
-
-### Add an Actor
-
-Add to `axis_B_curriculum_making.actor_types`:
-
-```json
-{
-  "actor": "new_actor_name",
-  "typical_power": "medium",
-  "primary_concerns": ["concern 1", "concern 2"],
-  "typical_artifacts": ["artifact 1", "artifact 2"]
-}
-```
+The questions that appear under this lens are meant to unsettle familiar reasoning—gently, productively—so that users might return to canonical views with new sensitivity to what those views make visible and what they obscure.
 
 ---
 
-## ⚠️ Disclaimers
+## Actors in Curriculum-Making
 
-- These are **conceptual lenses**, not prescriptions
-- Real educational settings **often hybridize** approaches
-- We do **not assign fixed ideologies** to actors
-- Curriculum emerges through **negotiation and enactment**
+Curriculum City also invites reflection on *who* and *what* participates in curriculum-making.
 
----
+In canonical curriculum discourse, actors are often understood as human roles: teachers, students, policymakers, administrators, families. These roles are positioned at different levels—from national policy to individual learning—and are seen to carry different concerns and forms of influence.
 
-## 📚 Theoretical Foundations
+This framing is valuable. It helps make visible the social complexity of curriculum work.
 
-- Elliot Eisner's curriculum orientations
-- Mark Priestley's curriculum-making framework
-- Tyler, Taba, and classical curriculum design
-- Pragmatist and critical pedagogies
+Under the Posthuman Lens, however, the actor system expands. Actors may include:
 
----
+- **Materials** — textbooks, furniture, equipment, and physical resources
+- **Technologies** — platforms, algorithms, and digital systems
+- **Time** — schedules, pacing guides, and temporal rhythms
+- **Affect** — emotional climates, anxieties, and motivational conditions
+- **Ecological conditions** — spaces, environments, and sustainability factors
 
-## 📄 License
+These more-than-human actors do not replace human roles. They sit alongside them, foregrounding the idea that agency in curriculum-making is distributed across a wider field than human intention alone.
 
-Educational research and professional learning tool. Full citations available on request.
+Naming these actors is not meant to diminish human responsibility or creativity. It is meant to support a more relational understanding of how curriculum happens in practice.
 
 ---
 
-## 🙏 Credits
+## A Note on Reading This Space
 
-Framework data version: **0.5**  
-Built with Next.js, TypeScript, and Tailwind CSS
+Curriculum City is not a model to adopt.
+
+It is a landscape to think with—a space where ideas can be explored, compared, and questioned. The goal is not to arrive at a single correct answer, but to become more fluent in the languages of curriculum-making and more attuned to the choices embedded in different approaches.
+
+Some suggestions for engaging with this space:
+
+- **Explore, rather than consume.** There is no linear path. Move according to curiosity, not obligation.
+- **Compare perspectives, rather than seek answers.** The value lies in understanding difference, not in resolving it.
+- **Use the lenses as tools for reflection.** Switching between views is not about finding the "right" lens—it is about noticing what each lens reveals and conceals.
+- **Return with new questions.** A good conceptual landscape rewards revisiting.
+
+---
+
+## Closing
+
+Curriculum-making is one of the most consequential activities in education. It shapes what is taught, how it is taught, and what it means to learn.
+
+Yet curriculum is also shaped—by traditions, by institutions, by materials, by conditions that often remain unnamed.
+
+Curriculum City invites you to navigate this complexity: to encounter familiar ideas in new arrangements, to consider unfamiliar perspectives, and to reflect on the reasoning that guides your own curriculum practice.
+
+It is a space designed not to tell you what to think, but to support you in thinking more carefully.
+
+Welcome.

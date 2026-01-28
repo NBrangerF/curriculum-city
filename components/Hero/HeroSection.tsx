@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import CityFlowMap from './CityFlowMap';
+import { useLens } from '@/contexts/LensContext';
+import PosthumanView from '@/components/Lens/PosthumanView';
 
 // ───────────────────────────────────────────────────────────
 // Types matching framework.json structure
@@ -95,6 +97,9 @@ export default function HeroSection() {
     const [connections, setConnections] = useState<FlowConnection[]>([]);
     const [actors, setActors] = useState<{ id: string; label: string; level: string; concerns?: string[]; levers?: string[] }[]>([]);
     const [loading, setLoading] = useState(true);
+
+    // Access lens context
+    const { isPosthumanLens } = useLens();
 
     useEffect(() => {
         async function loadData() {
@@ -219,6 +224,11 @@ export default function HeroSection() {
 
         loadData();
     }, []);
+
+    // If posthuman lens is active, render PosthumanView instead
+    if (isPosthumanLens) {
+        return <PosthumanView />;
+    }
 
     return (
         <section className="relative overflow-hidden">

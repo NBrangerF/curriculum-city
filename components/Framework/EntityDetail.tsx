@@ -3,6 +3,7 @@
 import type { Entity, EntityType } from '@/lib/framework/loadFramework';
 import PracticeSection from './PracticeSection';
 import TensionsSection from './TensionsSection';
+import LensAnnotation from '@/components/Lens/LensAnnotation';
 
 interface EntityDetailProps {
     entity: Entity | null;
@@ -58,6 +59,12 @@ export default function EntityDetail({ entity }: EntityDetailProps) {
                             {entity.definition || 'Definition not yet available.'}
                         </p>
                     </div>
+
+                    {/* Posthuman Lens Annotation */}
+                    <LensAnnotation
+                        type={entity.type === 'philosophy' ? 'philosophy' : 'conception'}
+                        entityId={entity.id}
+                    />
                 </section>
 
                 {/* Key Characteristics */}
